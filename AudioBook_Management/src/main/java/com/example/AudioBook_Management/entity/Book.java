@@ -10,7 +10,7 @@ import java.time.LocalDate;
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "book_id",nullable = false)
+    @Column(nullable = false)
     private Long id;
     @Column(name = "name")
     private String name;
@@ -25,13 +25,13 @@ public class Book {
     @Column(name = "description")
     private String description;
     @ManyToOne
-    @JoinColumn(name = "user_id", insertable = false, updatable = false)
+    @JoinColumn(name = "user_id")
     private User author;
     @ManyToOne
-    @JoinColumn(name = "user_id", insertable = false, updatable = false)
+    @JoinColumn(name = "user_id")
     private User narrator;
     @ManyToOne
-    @JoinColumn(name = "user_id", insertable = false, updatable = false)
+    @JoinColumn(name = "user_id")
     private User publisher;
     @Column(name = "publication_year")
     private LocalDate publication_year;

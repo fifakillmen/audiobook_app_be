@@ -7,11 +7,11 @@ import jakarta.persistence.*;
 public class Rating_by_user {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "rating_by_user_id", nullable = false)
+    @Column( nullable = false)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", insertable = false, updatable = false)
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne
