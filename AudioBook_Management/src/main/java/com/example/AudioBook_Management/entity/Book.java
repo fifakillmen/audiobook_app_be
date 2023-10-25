@@ -25,13 +25,13 @@ public class Book {
     @Column(name = "description")
     private String description;
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "author")
     private User author;
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "narrator")
     private User narrator;
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "publisher")
     private User publisher;
     @Column(name = "publication_year")
     private LocalDate publication_year;
