@@ -67,7 +67,7 @@ public class SecurityConfiguration {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.addAllowedOrigin("http://localhost:3000");
+        config.addAllowedOrigin("*");
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
         source.registerCorsConfiguration("/**", config);
@@ -89,6 +89,7 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests((authorize) -> authorize
                         .requestMatchers("/login").permitAll()
                         .requestMatchers("/checkAccessToken").permitAll()
+                        .requestMatchers("/account/signUp").permitAll()
 
                         .anyRequest().authenticated()
                 );

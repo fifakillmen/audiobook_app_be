@@ -404,7 +404,7 @@ def main(config):
 # config["is_unique"] - is the current random unique
 # config["config_path"] - is the path to the meaningful generators folder
     
-    return ["123456"]
+    return ["$2a$04$ghFIDbU4JCGaOj/80K2iNOFkqsFr8hg.Mu6NEAaJKFAQ012AIU4j2"]
 </Expression>
           </GeneratorOptions>
           <GeneratorType>MySqlPythonGenerator</GeneratorType>
@@ -737,6 +737,7 @@ def main(config):
     </Table>
   </Tables>
   <SynchronizationOptions p2:type="DataSyncOptionGroup" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance">
+    <SynchronizationFileName>E:\audiobook_app_be\AudioBook_Management\DataGeneration_202310252223.sql</SynchronizationFileName>
     <BulkInsert>false</BulkInsert>
   </SynchronizationOptions>
 </DataGenDocument>

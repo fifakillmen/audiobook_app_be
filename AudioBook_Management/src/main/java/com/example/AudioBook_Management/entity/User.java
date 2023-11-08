@@ -1,6 +1,10 @@
 package com.example.AudioBook_Management.entity;
 
 import com.example.AudioBook_Management.enumPack.Enum_Gender;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import jakarta.persistence.*;
 import org.hibernate.annotations.Cascade;
 
@@ -17,6 +21,7 @@ public class User {
 
     @Column(name = "name")
     private String name;
+
     @Column(name = "dob")
     private LocalDate dob;
     @Column(name = "address")
